@@ -65,7 +65,6 @@
             const diagram = document.getElementById('diagram');
             buttonObj.className = toggleSelection(buttonObj.className); // switch button selection
             buttonState ^= (1 << (index - 1));
-            console.log('state', buttonState);
 
             switch (buttonState) {
                 case 0b0000: // just actors
