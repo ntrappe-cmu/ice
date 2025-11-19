@@ -1,0 +1,152 @@
+@import './fonts/fonts.css';
+
+body, main {
+    font-family: 'SF Pro';
+    font-weight: 400;
+    width: 100%;
+}
+
+p {
+    font-family: 'SF Pro';
+    font-weight: 500;
+    width: 100%;
+    color: rgb(227, 233, 237);
+}
+
+h1 {
+    font-family: 'SF Pro';
+    font-weight: 500;
+    width: 100%;
+    color: rgb(71, 73, 74);
+    font-size: 25px;
+    padding-left: 20px;
+    padding-top: 5px;
+}
+
+#controls {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-height: 5em;
+    width: 100%;
+    background-color: #1e222a;
+
+    /* In small formats, make controls taller for wrap */
+    @media screen and (max-width:735px) {
+        min-height: 7em;
+    }
+}
+
+#button-box {
+    display: flex;
+    margin: auto;
+    align-items: center;
+
+    /* In small formats, wrap buttons into 2 rows */
+    @media screen and (max-width:735px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+}
+
+#diagram-box {
+    display: flex;
+    position: absolute;
+    bottom: 5em;
+    left: 0;
+    width: 100%;
+}
+
+#key {
+    padding-left: 15px;
+    padding-top: 15px;
+    border-top: 2px solid #C7C7C7;
+    color: rgb(51, 51, 51);
+    font-size: 14px;
+    img {
+        width: 100%;
+    }
+}
+
+.button-wrapper {
+    display: flex;
+    align-items: center;
+    color: rgb(210, 206, 220);
+    margin-right: 3em;
+    font-size: 14px;
+    font-weight: 500;
+
+    @media screen and (max-width:850px) {
+        margin-right: 20px;
+        margin-bottom: 5px;
+        min-width: fit-content;
+    }
+}
+
+.button-wrapper:last-child {
+    margin-right: 0;
+}
+
+span.title {
+    align-items: center;
+    font-weight: 600;
+    color: white;
+    font-size: 14px;
+    margin-right: 5em;
+}
+
+#diagram {
+    width: 80%;
+    border-right: 2px solid #C7C7C7;
+
+    @media screen and (max-width:850px) {
+        width: 90%;
+    }
+}
+
+button {
+    border: 1.5px solid #d5d5d5;
+    border-radius: 7px;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+button svg {
+    width: 18px;
+    height: 18px;
+    fill: #d5d5d5;
+}
+
+button.unselected {
+    background: none;
+    svg {
+        visibility: hidden;
+    }
+}
+
+button.selected {
+    background-color: #574ddd;
+    svg {
+        visibility: visible;
+    }
+}
+
+button:hover {
+    border-color: white;
+    cursor: pointer;
+
+    svg {
+        fill: white;
+    }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
